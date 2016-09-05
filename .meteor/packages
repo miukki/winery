@@ -26,8 +26,8 @@ spiderable
 fastclick
 dburles:collection-helpers
 raix:handlebar-helpers
+aldeed:simple-schema
 aldeed:collection2
-simple:json-routes
 aldeed:autoform
 accounts-ui
 accounts-password
