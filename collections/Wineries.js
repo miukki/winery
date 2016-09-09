@@ -1,42 +1,22 @@
-
 Wineries = new Mongo.Collection('wineries');
 
+/*
+	{name: 'winery1', regionId: res[0].id },
+	{name: 'winery2', regionId: res[1].id},
+	{name: 'winery3', regionId: res[2].id }
+
+*/
+
+
 WinerySchema = new SimpleSchema({
-	name: {
+	winery: {
 		type: String,
-		label: "Name",
+		label: "Winery",
 		max: 200
-	},
-	desc: {
-		type: String,
-		label: "Description",
-		optional: true
 	},
 	region: {
 		type: RegionSchema
-	},
-	createAt: {
-		type: Date,
-		label: "Create At",
-		autoValue: function() {
-			return new Date();
-		},
-		autoform: {
-			type: "hidden"
-		}
-		
-	},
-	supplier: {
-		type: String,
-		label: "Supplier",
-		autoValue: function () {
-			return this.userId;
-		},
-		autoform: {
-			type: "hidden"
-		}
 	}
-
 
 });
 

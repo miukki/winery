@@ -1,10 +1,16 @@
 /* jshint validthis:true */
 Countries = new Mongo.Collection('countries');
 
+/*
+              {name: 'France'},
+              {name: 'Spain'},
+              {name: 'New Zealand'}
+*/
+
 CountrySchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Name"
+		label: "Country"
 	}
 
 });
