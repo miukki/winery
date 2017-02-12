@@ -1,0 +1,29 @@
+<template name="ViewWine">
+	<article class="item">
+        <h3>{{wine.title}}</h3>
+		<p>{{wine.desc}}</p>
+		
+		<p>
+			Winery: {{wine.winery.winery}}, Region: {{wine.winery.region.name}}, Country: {{wine.winery.region.country.name}},  Year: {{wine.year.year}} , Supplier: {{wine.supplier}}
+		</p>
+		
+		<p class="type">Types:
+			{{#each wine.type}}
+					{{type}}
+			{{/each}}
+		</p>
+
+		<p class="price">Price:
+			{{#each wine.price}}
+					{{amount}} {{currency}}
+			{{/each}}
+		</p>
+
+		<p class="grapes">Grapes:
+			{{#each wine.grapes}}
+					{{name}}
+			{{/each}}
+		</p>
+
+	</article>
+</template>

@@ -1,0 +1,17 @@
+<template name="Countries">
+    <div class="new-container">
+        {{#if Template.subscriptionsReady}}
+
+            <label> All Countries</label>
+            <ul>
+            {{#each countries}}
+                <li>
+                    {{name}} <a href="#">delete </a>
+                </li>
+            {{/each}}
+            </ul>
+        {{else}}
+            {{>Loader}}
+        {{/if}}
+    </div>
+</template>

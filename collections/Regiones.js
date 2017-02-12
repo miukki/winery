@@ -9,8 +9,8 @@ Regiones = new Mongo.Collection('regiones');
 
 RegionSchema = new SimpleSchema({
 	name: {
-		type: String,
 		label: "Region",
+		type: String,
 		max: 200
 	},
 	country: {

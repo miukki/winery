@@ -1,5 +1,5 @@
 ## Descriprtion
-Wine scanner
+Mobile Sommelier
 
 ## Install for dev env
 `meteor install`

@@ -1,5 +1,3 @@
-/*Styles*/
-
 normalize-css()
 
 // Material Shadows
@@ -127,10 +125,10 @@ p
         margin-top 40px
         padding-left $side-nav-large
     
-.new-recipe
+.new-item
     margin-bottom 20px 
 
-.new-recipe-container
+.new-container
     position relative
     background #FFF
     padding 20px 
@@ -308,7 +306,7 @@ input, select, textarea
             &:hover, &.active
                 border-left 10px solid teal
 
-.recipe
+.item
     background #FFF 
     padding 0 20px 20px
     margin-bottom 20px
@@ -355,9 +353,10 @@ input, select, textarea
         font-size 1.2em 
     &:hover 
         shadow-level(3)
-        // animation card 0.6s ease 1 forwards
+        /*animation item 0.6s ease 1 forwards*/
 
-@keyframes card
+/*
+@keyframes item
     0%
         transform translate3d(0, 0, 0)
     50%
@@ -368,22 +367,12 @@ input, select, textarea
     100%
         z-index 10
         transform translate3d(0, 0, 0)
+*/
 
             
 .menu-item
-    @extend .recipe
+    @extend .item
     
-.shopping-list
-    @extend .recipe
-    padding 50px 5%
-    list-style none
-    li
-        font-size 2em 
-        padding 20px
-        border-bottom 1px solid light-grey
-        border-top 1px solid light-grey
-        & + li 
-            border-top none
 
 .login-buttons-dropdown-align-
     #login-dropdown-list
@@ -391,3 +380,6 @@ input, select, textarea
         left auto 
         a 
             color dark-purp
+
+.panel-default 
+    clear:both  

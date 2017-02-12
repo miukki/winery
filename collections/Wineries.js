@@ -11,7 +11,6 @@ Wineries = new Mongo.Collection('wineries');
 WinerySchema = new SimpleSchema({
 	winery: {
 		type: String,
-		label: "Winery",
 		max: 200
 	},
 	region: {

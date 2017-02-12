@@ -26,14 +26,29 @@ spiderable@1.0.13
 fastclick@1.0.12
 dburles:collection-helpers
 raix:handlebar-helpers
-aldeed:simple-schema
+
+#aldeed:simple-schema
 aldeed:collection2
-aldeed:autoform
-accounts-ui
-accounts-password
+aldeed:autoform #form
+
+accounts-ui #account
+accounts-password #account
+
 matb33:bootstrap-glyphicons
 zimme:active-route
-gwendall:auth-client-callbacks
-shell-server
+gwendall:auth-client-callbacks #client callback packages
 meteortoys:allthings
 datariot:ganalytics
+
+check
+
+
+shell-server
+fourseven:scss #layout
+npm-bcrypt
+
+#poetic:materialize-scss #layout
+#useraccounts:materialize #account
+#accounts-wechat #account
+#accounts-google
+

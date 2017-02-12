@@ -1,8 +1,17 @@
 <template name="HomeLayout">
-	<header>
-		<h1>Login</h1>
-		{{> loginButtons}}
-	</header>
-	<main>
+
+	{{> HeaderIndex}}
+
+
+	<main class="main-layout">
+        {{> Welcome}}
 	</main>	
+</template>
+
+<template name="Welcome">
+   <section>
+       <h3>
+           Mobile Sommelier For Suppliers
+       </h3>
+   </section>
 </template>

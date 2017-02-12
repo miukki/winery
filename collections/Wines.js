@@ -1,19 +1,17 @@
 Wines = new Mongo.Collection('wines');
 
 Wines.allow({
-	insert: function(userId) {
+	insert: function(userId, doc) {
 		return !!userId; //if userId available then insert
 	}
 });
 
 PriceSchema = new SimpleSchema({
 	currency: {
-		type: String,
-		label: "Currency"
+		type: String
 	},
 	amount: {
-		type: String,
-		label: "Amount"
+		type: String
 	}
  
 });
@@ -23,8 +21,9 @@ YearSchema = new SimpleSchema({
 		type: Number,
 		label: "Year",
 		max: 2016,
-		min: 1900
-	},
+		min: 1900,
+		optional: true
+	}
 
 });
 
@@ -57,8 +56,7 @@ WineSchema = new SimpleSchema({
 	},
 	
 	year: {
-		type: YearSchema,
-		optional: true
+		type: YearSchema
 	},
 
 	type: {
@@ -70,12 +68,11 @@ WineSchema = new SimpleSchema({
 	},
 
 	price: {
-		type: [PriceSchema],
+		type: [PriceSchema]
 	},
 
 	grapes: {
-		type: [GrapeSchema],
-		optional: true
+		type: [GrapeSchema]
 	},
 
 	createAt: {
@@ -87,13 +84,14 @@ WineSchema = new SimpleSchema({
 		autoform: {
 			type: "hidden"
 		}
-		
+
 	},
 
 	supplier: {
 		type: String,
 		label: "Supplier",
 		autoValue: function () {
+			console.log('this', this);
 			return this.userId;
 		},
 		autoform: {

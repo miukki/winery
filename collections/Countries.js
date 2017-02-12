@@ -7,6 +7,13 @@ Countries = new Mongo.Collection('countries');
               {name: 'New Zealand'}
 */
 
+
+Countries.allow({
+  insert: function(userId, doc) {
+    return !!userId; //if userId available then insert
+  }
+});
+
 CountrySchema = new SimpleSchema({
 	name: {
 		type: String,
@@ -18,8 +25,7 @@ CountrySchema = new SimpleSchema({
 Countries.attachSchema(CountrySchema);
 
 // Validate an object against the schema
-obj = {name: "France"};
-isValid = CountrySchema.namedContext("myContext").validate(obj);
+isValid = CountrySchema.namedContext("myContext").validate({name: "France"});
 
 
 // Validation errors are available through reactive methods
@@ -27,6 +33,8 @@ if (Meteor.isClient) {
   Meteor.startup(function() {
     Tracker.autorun(function() {
       var context = CountrySchema.namedContext("myContext");
+      console.log('context', context);
+
       if (!context.isValid()) {
         console.log(context.invalidKeys());
       }

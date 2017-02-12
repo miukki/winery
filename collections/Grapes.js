@@ -4,7 +4,8 @@ Grapes = new Mongo.Collection('grapes');
 GrapeSchema = new SimpleSchema({
 	name: {
 		type: String,
-		label: "Name"
+		label: "Name",
+		optional: true
 	}
 
 });

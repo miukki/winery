@@ -1,0 +1,13 @@
+<template name="WineAnnotation">
+	<article class="item">
+        <h3><a href="/wines/{{_id}}">{{title}}</a></h3>
+		<p>
+			Winery: {{winery.winery}}, Region: {{winery.region.name}}, Country: {{winery.region.country.name}},  Year: {{year.year}} 
+		</p>
+		<p>Supplier: {{supplier}}</p>
+
+        <button class="btn-primary toggle-menu">add</button>
+        <button class="btn-deny toggle-menu">remove</button>
+
+    </article>
+</template>
